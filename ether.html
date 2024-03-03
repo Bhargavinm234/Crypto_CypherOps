@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+64BquZ2jcqEc/5OBQZ30Swg8F7G7B28PJSuZ5K2KRkVdkL" crossorigin="anonymous">
+    <link rel="stylesheet" href="ether.css">
+    <script src="ether.js" defer></script> 
+    
+  <!-- Include Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Custom styling for the chart */
+    canvas {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 100%;
+      height: auto;
+      background-color: aliceblue;
+    }
+    .chart-buttons {
+      text-align: center;
+     
+    }
+    .chart-buttons button {
+    margin: 70px 15px;
+    margin-left: 150px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+    .chart-buttons button:hover {
+      background-color: #0056b3;
+    }
+    .chart-container {
+    width: 1200px;
+    height: 600px; /* Adjust the width as needed */
+    
+    /* Set a maximum width to prevent the chart from becoming too wide */
+}
+
+canvas {
+    width: 100%; /* Make sure the canvas fills its container */
+    height: auto; /* Allow the height to adjust automatically */
+}
+
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+          <img src="" alt="Logo">
+          <!--<span class="logo-name">Cryptohawk</span>-->
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Signup or Login</button>
+          <div class="dropdown-content">
+            <a href="#signup">Signup</a>
+            <a href="#login">Login</a>
+          </div>
+        </div>
+        <a href="#about">About Us</a>
+        <a href="#services-section">Services</a>
+        <a href="#insights">Insights</a>
+      
+      </nav>
+      
+    <div class="body">
+    <div class="etherint">
+        <div class="gif">
+            <img src="images/ether.gif" class="small-image">
+            <h1>ETHEREUM</h1>
+            <p>Etherium is a smart contract platform<br>
+                 that enables developers to build tokens<br> 
+                 and decentralized applications.
+            </p>
+            <div class="data">
+                <div class="column">
+                    <h2>Current Price</h2>
+                    <p id="currentPrice">-</p> <!-- Initially displaying a dash or any placeholder -->
+                </div>
+                <div class="column">
+                    <h2>Market Cap</h2>
+                    <p id="marketCap">-</p> <!-- Initially displaying a dash or any placeholder -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="timestrap">
+      <div class="chart-container">
+        <canvas id="priceChart"></canvas>
+      </div>
+    
+      <div class="chart-buttons">
+        <button id="btn24hrs">24 Hours</button>
+        <button id="btn1week">1 Week</button>
+        <button id="btn1month">1 Month</button>
+      </div>
+</div>
+
+
+</body>
+</html>

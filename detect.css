@@ -1,0 +1,213 @@
+nav {
+   
+    overflow: hidden;
+    height: 100px;
+  }
+  
+  .logo-container {
+    float: left;
+    padding: 35px;
+  }
+  
+  .logo-container img {
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  .logo-container .logo-name {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 10px; /* Adjust the margin as needed */
+  }
+  
+  nav a {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 45px 15px;
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 50px;
+    font-family: sans-serif;
+  }
+  
+  nav a:hover {
+    color: rgb(111, 152, 213);
+  }
+  
+  .dropdown {
+    float: right;
+    overflow: hidden;
+    padding: 30px 20px;
+  }
+  
+  .dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    background-color: inherit;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+h1{
+    text-align: center;
+   font-size: 50px;
+   color: antiquewhite;
+   
+}
+.body-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the wrapper is behind other content */
+    background-image: url('images/detect.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Apply blur filter to the background wrapper */
+}
+
+.first {
+    display: flex;
+    margin-bottom: 50px;
+  
+}
+
+.video {
+    flex: 1;
+    margin-left: 200px;
+    margin-top: 50px;
+    /* Replace 'background.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   
+}
+.head h2{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.content {
+    flex: 1;
+    
+    /* Adjust the margin to move the content closer to the left */
+    padding-left: 20px;
+    margin-right: 150px;
+    
+}
+
+.content p{
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+li {
+    padding: 10px;
+    font-size: 30px;
+    color: antiquewhite;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(42, 184, 212, 0.1);
+    height: 70px;
+    width: 800px;
+    transition: box-shadow 0.6s ease; /* Light transition effect */
+}
+
+/* Hover effect to make the shadow slightly darker */
+li:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style for the chart container */
+.barChart {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the chart horizontally */
+    padding: 10px; /* Add padding for spacing */
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Style for the canvas element */
+#myChart {
+    background-color: rgb(195, 223, 233);
+    width: 100%; /* Make the chart responsive */
+    max-width: 800px; /* Set maximum width for the chart */
+    height: 500px; /* Set a fixed height for the chart */
+}
+.head{
+    display: flex;
+    background-color: rgb(127, 155, 188);
+    height: 100%;
+    align-items: center;
+   
+}
+.right{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+ h2{
+   
+    color: rgb(4, 4, 4);
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(127, 155, 188);;
+   
+}
+.content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content2 p{
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.block {
+    width: 400px;
+    padding: 10px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px; /* Adjust spacing between blocks */
+    border-radius: 15px; /* Slightly rounded corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analyze.css">
+    <title>Transaction Patterns</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+      function showPopup() {
+    var analysisType = document.getElementById("analysis-type").value;
+    var popup = document.getElementById("popup");
+    var popupContent = document.getElementById("popup-content");
+    var popupTitle = document.getElementById("popup-title");
+
+    switch (analysisType) {
+        case "day-wise":
+            popupTitle.textContent = "Day Wise Analysis";
+            break;
+       
+        case "month-wise":
+            popupTitle.textContent = "Month Wise Analysis";
+            break;
+        case "year-wise":
+            popupTitle.textContent = "Year Wise Analysis";
+            break;
+    }
+
+    if (analysisType !== "none") {
+        popup.style.display = "block";
+        document.body.classList.add("blur");
+    } else {
+        popup.style.display = "none";
+        document.body.classList.remove("blur");
+    }
+}
+
+function hidePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+    document.body.classList.remove("blur");
+}
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Transactions Volume(in million)'],
+          ['United States', 8000000],
+          ['China', 5000000],
+          ['Russia', 3500000],
+          ['United Kingdom', 2800000],
+          ['Germany', 2500000],
+          ['Japan', 2200000],
+          ['Canada', 1700000],
+          ['Australia',1500000],
+          ['India',1300000],
+        ]);
+
+        var options = {
+            backgroundColor: '#95e2f5',
+      colorAxis: { colors: ['#FF5733', '#6C3483', '#1E8449', '#2980B9', '#F4D03F', '#A569BD', '#5DADE2', '#58D68D', '#0c87f2'] }
+    };
+
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Transactions'],
+      ['2018',  1],
+      ['2019',  2],
+      ['2020',  2],
+      ['2021', 2],
+      ['2022',  7]
+    ]);
+
+    var options = {
+      title: 'Year Wise'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+</script>
+</head>
+<body>
+<div class="background-wrapper"></div> 
+<nav>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Logo">
+      <!--<span class="logo-name">Cryptohawk</span>-->
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Signup or Login</button>
+      <div class="dropdown-content">
+        <a href="#signup">Signup</a>
+        <a href="#login">Login</a>
+      </div>
+    </div>
+    <a href="#about">About Us</a>
+    <a href="#services-section">Services</a>
+    <a href="#insights">Insights</a>
+  
+  </nav>
+  <div class="dropdown-menu">
+    <label for="analysis-type">Select Analysis Type:</label>
+    <select id="analysis-type" onchange="showPopup()">
+        <option value="day-wise">Day Wise</option>
+        <option value="month-wise">Month Wise</option>
+        <option value="year-wise">Year Wise</option>
+    </select>
+</div>
+
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+      <span class="close" onclick="hidePopup()">&times;</span>
+      <h2 id="popup-title"></h2>
+      <!-- Add your content for analysis here -->
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </div>
+</div>
+
+    <div class="heading1">
+        <p class="text">
+          Transaction Patterns
+        </p>
+    </div>
+    <div class="main">
+        <div class="wrapper">
+          <video width="640" heig1ht="600" autoplay loop>
+            <source src="images/analyze.mp4" type="video/mp4">
+         </video>
+            <div class="text-box">
+                <h2>Learn about Transaction Patterns</h2>
+                <ul>
+                    <li>Analyzing transaction patterns in cryptocurrency involves examining the flow of digital assets across blockchain networks to discern trends, behaviors, and anomalies.</li>
+                    <li>This process entails monitoring transaction volume, frequency, and size to gauge market activity and user behavior.</li>
+                    <li>Additionally, analysts track transaction flow between addresses, cluster related addresses, and identify whale activity to understand market dynamics and potential manipulation.</li>
+                    <li>Detection of market anomalies, such as arbitrage opportunities or manipulation schemes, is facilitated by scrutinizing transaction patterns.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="graphhead">Transaction Volumes in different Regions</div>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+
+
+
+    <footer>
+        <div class="container">
+          <p>&copy; 2024 Cryptocurrency Tool. All rights reserved. <br> <br>
+            <a href="https://ethereum.org/" target="_blank">Learn more about Ethereum</a>|
+            <a href="https://www.coindesk.com/" target="_blank">Latest Cryptocurrency News</a>| 
+            <a href="https://coinmarketcap.com/" target="_blank">Check Coin Market Prices</a>| 
+            <a href="https://bitcoin.org/" target="_blank">Bitcoin Official Website</a>| 
+            <a href="https://www.blockchain.com/" target="_blank">Explore Bitcoin Blockchain</a>| 
+            <a href="https://www.reddit.com/r/ethereum/" target="_blank">Ethereum Subreddit</a>| 
+            <a href="https://www.reddit.com/r/Bitcoin/" target="_blank">Bitcoin Subreddit</a>
+          </p>
+        </div>
+      </footer>
+    
+<script>
+      function showPopup() {
+    var analysisType = document.getElementById("analysis-type").value;
+    console.log("Selected analysis type:", analysisType);
+
+    var popup = document.getElementById("popup");
+    var popupTitle = document.getElementById("popup-title");
+
+    switch (analysisType) {
+        case "day-wise":
+            popupTitle.textContent = "Day Wise Analysis";
+            break;
+        case "month-wise":
+            popupTitle.textContent = "Month Wise Analysis";
+            break;
+        case "year-wise":
+            popupTitle.textContent = "Year Wise Analysis";
+            break;
+    }
+
+    if (analysisType !== "none") {
+        popup.style.display = "block";
+        document.body.classList.add("blur");
+        console.log("Popup displayed.");
+    } else {
+        popup.style.display = "none";
+        document.body.classList.remove("blur");
+        console.log("Popup hidden.");
+    }
+}
+
+function hidePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+    document.body.classList.remove("blur");
+    console.log("Popup hidden.");
+}
+
+  </script>
+</body>
+</html>

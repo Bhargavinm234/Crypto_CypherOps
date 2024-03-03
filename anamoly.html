@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamoy Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./anamoly.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="background-wrapper"></div> 
+    <nav>
+        <div class="logo-container">
+          <img src="images/logo1.png" alt="Logo">
+          <!--<span class="logo-name">Cryptohawk</span>-->
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Signup or Login</button>
+          <div class="dropdown-content">
+            <a href="#signup">Signup</a>
+            <a href="#login">Login</a>
+          </div>
+        </div>
+        <div class="searchbar">
+        <form id="searchForm">
+            <label class="search1" for="transactionId"></label>
+            <input class="search1" type="text" id="transactionId" name="transactionId" placeholder="Enter Transaction Id">
+            <button class="search1" type="button" onclick="search()">Search</button>
+        </form>
+    </div>
+        <div id="result"></div>
+
+        <a href="#about">About Us</a>
+        <a href="#services-section">Services</a>
+        <a href="#insights">Insights</a>
+
+</nav>
+    <div class="heading1">
+        <p class="text">
+            Anamoly Detection
+        </p>
+    </div>
+  <div class="main">
+   <div class="wrapper">
+    <img src="images/Analyze-amico.svg">
+    <div class="text-box">
+        <h2>What Are Anamolies?</h2>
+        <p>
+            Anomalies in cryptocurrency transactions are deviations from typical patterns or behaviors within the blockchain network. These anomalies can indicate various irregularities, including potential fraud, money laundering, market manipulation, or security breaches. One common anomaly is observed in large transactions, often referred to as "whale activity," where substantial amounts of cryptocurrency are moved in a single transaction or series of transactions. Unusually high or low transaction volumes compared to historical data may signal abnormal market activity, such as pump-and-dump schemes or orchestrated sell-offs.</p>
+    </div>
+   </div>
+</div>
+
+<!-- CARDS-->
+<div class="cardhead">
+    Common types of anomalies in the crypto space
+</div>
+    
+<div class="card-slider">
+    <div class="card">
+        <img src="images/pricea.jpg" class="card-img">
+        <div class="card-body">
+            <h1 class="card-title">Price Anamolies</h1>
+            <p class="card-subtitle"> Sudden and significant price movements that cannot be easily explained by market fundamentals or news. These can include flash crashes, pump-and-dump schemes, or price spikes without clear catalysts.</p>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <img src="images/trading.jpg" class="card-img">
+        <div class="card-body">
+            <h1 class="card-title">Trading Volume Anamolies</h1>
+            <p class="card-subtitle">Abnormally high or low trading volumes relative to historical averages or compared to other assets. Unusually high trading volumes may indicate manipulation or heightened market activity, while extremely low volumes may signal lack of interest or liquidity issues..</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/network.jpg" class="card-img">
+        <div class="card-body">
+            <h1 class="card-title">Network Anamolies</h1>
+            <p class="card-subtitle"> Irregularities or abnormalities in blockchain network activity, such as sudden increases or decreases in transaction throughput, changes in mining difficulty, or unusual patterns in transaction fees.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="card-slider2">
+    <div class="card">
+        <img src="images/regulatory.jpg" class="card-img">
+        <div class="card-body">
+            <h1 class="card-title">Regulatory Anamolies</h1>
+            <p class="card-subtitle">Changes in regulatory environments or government actions that impact the crypto markets, such as bans on cryptocurrency trading or initial coin offerings (ICOs), which can lead to sudden shifts in prices or market sentiment.</p>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <img src="images/security.jpg" class="card-img">
+        <div class="card-body">
+            <h1 class="card-title">Security Anamolies</h1>
+            <p class="card-subtitle">Breaches or vulnerabilities in cryptocurrency exchanges, wallets, or other infrastructure that result in theft or loss of funds. These incidents can have significant repercussions for affected users and may erode trust in the overall cryptocurrency ecosystem.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/market.jpg" class="card-img">
+        <div class="card-body">
+            <h1 class="card-title">Market manipulation  </h1>
+            <p class="card-subtitle">Deliberate efforts to artificially inflate or deflate the price of a cryptocurrency through coordinated trading strategies, often for the purpose of profiting at the expense of other market participants.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="button-container">
+    <button class="demo-button">Have a Demo</button>
+</div>
+
+</body>
+</html>
